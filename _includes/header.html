@@ -1,0 +1,11 @@
+<img src="assets/images/title.png" />
+
+<nav>
+	<label for="nav_menu"><img src="assets/images/menu.svg" /></label>
+	<input type="checkbox" id="nav_menu">
+	<nav_menu>
+	{% for item in site.data.nav %}
+	<a class="{% if item.url == page.url %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+	{% endfor %}
+	</nav_menu>
+</nav>

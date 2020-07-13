@@ -1,0 +1,16 @@
+<img src="assets/images/logo.png" />
+
+<div class="clear"></div>
+
+<social>
+	{% for icon in site.data.social %}
+	<a class="{{ icon.name }}" href="{{ icon.href }}" target="_new">
+		<img src="assets/images/fontawesome/{{ icon.name }}.svg">
+	</a>
+	{% endfor %}
+</social>
+
+<div class="clear"></div>
+
+<p>&copy; 2020 Pacific Northwest Keyboards</p>
+<p>All rights reserved</p>

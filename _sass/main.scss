@@ -1,0 +1,278 @@
+$bodyFont: Roboto;
+$bg: #f8f8f2;
+$fg: #282828;
+$yellow: #fabd2f;
+$green: #8ec07c;
+$maxWidth: 640px;
+$minWidth: 320px;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	background: $bg;
+	border: 0;
+	color: $fg;
+	display: flex;
+	flex-direction: column;
+	font-family: $bodyFont;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* Default links */
+
+a
+{
+	color: $yellow;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: $green;
+	text-decoration: underline;
+}
+
+a:active
+{
+	text-decoration: underline;
+}
+
+/* The banner, if used */
+
+banner
+{
+	background: $fg;
+	color: $bg;
+	display: block;
+	flex-shrink: 0;
+	line-height: 1.5em;
+	min-height: 10px;
+	text-align: center;
+}
+
+banner span
+{
+	display: block;
+	font-weight: bold;
+	margin: 0 auto;
+	max-width: $maxWidth;
+	padding: 1em 0 0 0;
+}
+
+/* The wrapper for the header and content */
+
+wrapper
+{
+	background: $bg;
+	display: block;
+	flex: 1 0 auto;
+	margin: 0 auto 1em auto;
+	max-width: $maxWidth;
+	padding: 0 2em;
+}
+
+wrapper p
+{
+	line-height: 1.5em;
+	text-align: justify;
+	text-indent: 2em;
+}
+
+/* The header with the title and navigation */
+
+/* The header's padding changes with respect to width, which is why we use a */
+/* percentage inside of padding. */
+/* https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css */
+header
+{
+	display: block;
+	padding: 10% 0 5% 0;
+}
+
+header img
+{
+	width: 100%;
+}
+
+/* All the navigation */
+
+nav
+{
+	display: block;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: right;
+}
+
+nav_menu a
+{
+	padding-left: 20px;
+}
+
+nav_menu a.active
+{
+    color: $fg;
+}
+
+nav_menu a:first-child
+{
+	padding-left: 0;
+}
+
+@media screen and (max-width: $maxWidth)
+{
+	nav a
+	{
+		width: 100%;
+		padding: 0.4em 0;
+		display: block;
+		text-align: center;
+	}
+}
+
+nav input[type=checkbox]
+{
+	display: none;
+}
+
+nav label
+{
+	cursor: pointer;
+	display: none;
+	padding: 5% 0;
+	text-align: center;
+	width: 100%;
+}
+
+/* The hamburger menu image */
+nav label img
+{
+	width: 10%;
+	height: 10%;
+	min-width: 25px;
+	min-height: 25px;
+}
+
+/* Toggled */
+nav input[type=checkbox]:checked ~ nav_menu
+{
+	display: block;
+}
+
+@media screen and (max-width: $maxWidth)
+{
+	header
+	{
+		padding-bottom: 0;
+	}
+
+	nav label
+	{
+		display: inline-block;
+	}
+
+	/* Default hidden */
+	nav nav_menu
+	{
+		display: none;
+	}
+}
+
+/* The content */
+
+content
+{
+	display: block;
+	margin: 20px auto;
+	max-width: $maxWidth;
+}
+
+/* The footer */
+
+footer
+{
+	background: $fg;
+	color: $bg;
+	display: block;
+	flex-shrink: 0;
+	line-height: 1em;
+	padding: 3em 0 2em 0;
+	text-align: center;
+	width: 100%;
+}
+
+footer p
+{
+	margin: 5px;
+}
+
+/* Social links */
+
+social
+{
+	display: block;
+	margin: 1em auto;
+}
+
+social a
+{
+	align: center;
+	border-radius: 10px;
+	display: inline-block;
+	height: 2em;
+	margin: 0.5em;
+	padding: 10px;
+	width: 2em;
+}
+
+social a.facebook
+{
+	background: #3c5a98;
+}
+social a.facebook:hover
+{
+	background: #4c6aa8;
+}
+
+social a.twitter
+{
+	background: #2daae4;
+}
+social a.twitter:hover
+{
+	background: #3dbaf4;
+}
+
+social a.instagram
+{
+	background: #d62976;
+}
+social a.instagram:hover
+{
+	background: #de518f;
+}
+
+social a.reddit
+{
+	background: #ff4500;
+}
+social a.reddit:hover
+{
+	background: #ff6a32;
+}
+
+/* Misc. */
+
+div.clear
+{
+	clear: both;
+}

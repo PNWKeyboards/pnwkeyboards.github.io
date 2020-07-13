@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<title>{{ site.title }} - {{ page.title }}</title>
+		<script defer src="https://use.fontawesome.com/5f201f2e3f.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body>
+
+		<banner>
+		{% if site.data.banner %}
+		{% include banner.html %}
+		{% endif %}
+		</banner>
+
+		<wrapper>
+
+			<header>
+			{% include header.html %}
+			</header>
+
+			<content>
+			{{ content }}
+			</content>
+
+		</wrapper>
+
+		<footer>
+		{% include footer.html %}
+		</footer>
+
+	</body>
+
+</html>

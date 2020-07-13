@@ -1,0 +1,27 @@
+- title: Home
+  url: /
+
+- title: News
+  url: /news.html
+
+- title: Shop
+  url: /shop.html
+  children:
+  - title: Main PCBs
+    url: /
+  - title: Daughter Boards
+    url: /
+  - title: Plates
+    url: /
+  - title: Misc. Parts
+    url: /
+  - title: Build Service
+    url: /
+  - title: B-Stock &amp; Prototypes
+    url: /
+
+- title: About
+  url: /about.html
+
+- title: Contact
+  url: /contact.html
