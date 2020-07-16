@@ -1,12 +1,16 @@
 title: PNWKeyboards
+url: https://www.pnwkeyboards.com/
+description: Custom mechanical keyboards from the Pacific Northwest.
+
 og:
-  url: https://www.pnwkeyboards.com/
-  description: Custom mechanical keyboards from the Pacific Northwest.
-  image: http://www.pnwkeyboards.com/assets/images/thumbnail.png
-  secure_image: https://www.pnwkeyboards.com/assets/images/thumbnail.png
+  image: /assets/images/thumbnail.png
+  secure_image: /assets/images/thumbnail.png
   image_mimetype: image/png
   image_width: 1200
   image_height: 350
   image_alt: The PNWKeyboards Logo
+twitter:
+  username: "@pnwkeyboards"
+
 exclude:
   - start_local.sh
