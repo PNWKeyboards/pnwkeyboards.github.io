@@ -1,4 +1,4 @@
-$bodyFont: Roboto;
+$bodyFont: "Source Sans Pro";
 $bg: #f8f8f2;
 $fg: #282828;
 $yellow: #fabd2f;
@@ -6,7 +6,7 @@ $green: #8ec07c;
 $maxWidth: 640px;
 $minWidth: 320px;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 html, body
 {
@@ -21,7 +21,7 @@ body
 	display: flex;
 	flex-direction: column;
 	font-family: $bodyFont;
-	font-size: 100%;
+	font-size: 14pt;
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
