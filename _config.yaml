@@ -1,5 +1,5 @@
 title: PNWKeyboards
-url: https://www.pnwkeyboards.com/
+url: https://www.pnwkeyboards.com # No trailing slash in the url!
 description: Custom mechanical keyboards from the Pacific Northwest.
 
 og:

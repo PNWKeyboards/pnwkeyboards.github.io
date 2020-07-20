@@ -24,7 +24,11 @@ body
 	font-size: 14pt;
 	margin: 0;
 	padding: 0;
-	vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5
+{
+	margin: 0;
 }
 
 /* Default links */
@@ -38,11 +42,6 @@ a
 a:hover
 {
 	color: $green;
-	text-decoration: underline;
-}
-
-a:active
-{
 	text-decoration: underline;
 }
 
@@ -95,7 +94,7 @@ wrapper p
 header
 {
 	display: block;
-	padding: 10% 0 5% 0;
+	padding: 10% 0;
 }
 
 header img
@@ -118,14 +117,14 @@ nav_menu a
 	padding-left: 15px;
 }
 
-nav_menu a.active
-{
-    color: $fg;
-}
-
 nav_menu a:first-child
 {
 	padding-left: 0;
+}
+
+nav_menu a.active
+{
+    color: $fg;
 }
 
 @media screen and (max-width: $maxWidth)
@@ -136,6 +135,7 @@ nav_menu a:first-child
 		padding: 0.2em 0;
 		display: block;
 		text-align: center;
+		margin: 0;
 	}
 }
 
@@ -148,7 +148,7 @@ nav label
 {
 	cursor: pointer;
 	display: none;
-	padding: 5% 0;
+	margin: 5% auto;
 	text-align: center;
 	width: 100%;
 }
@@ -185,6 +185,11 @@ nav input[type=checkbox]:checked ~ nav_menu
 	{
 		display: none;
 	}
+
+	nav_menu a:last-child
+	{
+		margin-bottom: 5%;
+	}
 }
 
 /* The content */
@@ -192,7 +197,7 @@ nav input[type=checkbox]:checked ~ nav_menu
 content
 {
 	display: block;
-	margin: 20px auto;
+	margin: 0 auto;
 	max-width: $maxWidth;
 }
 
@@ -229,7 +234,7 @@ social a
 	border-radius: 10px;
 	display: inline-block;
 	height: 1.75em;
-	margin: 0.25em;
+	margin: 0 0.3em;
 	padding: 10px;
 	width: 1.75em;
 }
