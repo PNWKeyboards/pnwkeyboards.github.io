@@ -14,3 +14,7 @@ twitter:
 
 exclude:
   - start_local.sh
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

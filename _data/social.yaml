@@ -1,14 +1,20 @@
 - name: facebook
   href: https://www.facebook.com/pnwkeyboards
+  tooltip: Facebook.com @PNWKeyboards
 
 - name: twitter
   href: https://twitter.com/pnwkeyboards
+  tooltip: "Twitter @PNWKeyboards"
 
 - name: instagram
   href: https://www.instagram.com/pnwkeyboards/
-
-- name: github
-  href: https://github.com/dnlglsn/dnlglsn.github.io
+  tooltip: Instagram @PNWKeyboards
 
 - name: reddit
   href: https://www.reddit.com/r/PNWKeyboards/
+  tooltip: Reddit r/PNWKeyboards
+
+- name: github
+  href: https://github.com/dnlglsn/dnlglsn.github.io
+  tooltip: Github dnlglsn
+

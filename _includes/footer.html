@@ -2,10 +2,18 @@
 
 <social>
 	{% for icon in site.data.social %}
-	<a class="{{ icon.name }}" href="{{ icon.href }}" target="_new">
-		<img src="assets/images/fontawesome/{{ icon.name }}.svg">
+	<a class="{{ icon.name }}" href="{{ icon.href }}" title="{{ icon.tooltip }}" target="_new">
+		<img src="assets/images/fontawesome/{{ icon.name }}.svg" />
 	</a>
 	{% endfor %}
 </social>
 
-<p>&copy; 2020 Daniel Gleason &boxv; <a href="https://github.com/dnlglsn/dnlglsn.github.io/blob/master/LICENSE" target="_new">Website License</a></p>
+<p>
+	<a href="/sitemap.xml" title="Sitemap">Sitemap</a>
+	&centerdot;
+	<a href="/feed.xml" title="Atom Feed">Atom Feed</a>
+	&centerdot;
+	<a href="https://github.com/dnlglsn/dnlglsn.github.io/blob/master/LICENSE" title="Website License" target="_new">Website License</a>
+</p>
+
+<p>&copy; 2020 Daniel Gleason</p>
