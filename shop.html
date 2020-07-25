@@ -1,0 +1,27 @@
+---
+layout: default
+title: Shop
+permalink: /shop.html
+---
+
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.17/default/snipcart.css" />
+<div id="snipcart" data-api-key="{{ site.snipcart.api_key }}"></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.17/default/snipcart.js"></script>
+
+{% for product in site.shop %}
+<div class="shop">
+	<a href="{{ product.url }}">
+		<img src="/shop/{{ product.images | first }}" alt="{{ product.name }}" />
+		<h3>{{ product.name }}</h3>
+	</a>
+	<div class="price">${{ product.price }}</div>
+	<button class="buy snipcart-add-item"
+			data-item-name="{{ product.name }}"
+			data-item-image="/shop/{{ product.images | first }}"
+			data-item-id="{{ product.identifier }}"
+			data-item-price="{{ product.price }}"
+			data-item-url="{{ product.url }}">
+			Quick Add
+	</button>
+</div>
+{% endfor %}

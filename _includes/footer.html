@@ -1,9 +1,9 @@
-<img src="assets/images/logo.png" />
+<img src="/assets/images/logo.png" />
 
 <social>
 	{% for icon in site.data.social %}
 	<a class="{{ icon.name }}" href="{{ icon.href }}" title="{{ icon.tooltip }}" target="_new">
-		<img src="assets/images/fontawesome/{{ icon.name }}.svg" />
+		<img src="/assets/images/fontawesome/{{ icon.name }}.svg" />
 	</a>
 	{% endfor %}
 </social>

@@ -12,6 +12,15 @@ og:
 twitter:
   username: "@pnwkeyboards"
 
+google_analytics: "UA-173246992-1"
+
+snipcart:
+  api_key: N2VmM2ExZDQtZjhhMS00Y2Y1LWI1MWMtZjAwOTE1NTY0YjgzNjM3MzA5OTIyOTE1NzYzNjk0
+
+collections:
+  shop:
+    output: true
+
 exclude:
   - start_local.sh
 

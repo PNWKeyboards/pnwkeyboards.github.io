@@ -3,6 +3,7 @@ $bg: #f8f8f2;
 $fg: #282828;
 $yellow: #fabd2f;
 $green: #8ec07c;
+$border: #e9e9e3;
 $maxWidth: 640px;
 $minWidth: 320px;
 
@@ -31,6 +32,14 @@ h1, h2, h3, h4, h5
 	margin: 0;
 }
 
+button.buy
+{
+	font-family: $bodyFont;
+	font-size: 14pt;
+	float: right;
+	height: 2em;
+}
+
 /* Default links */
 
 a
@@ -42,7 +51,55 @@ a
 a:hover
 {
 	color: $green;
-	text-decoration: underline;
+	text-decoration: none;
+}
+
+div.shop
+{
+	background-color: $border;
+	float: left;
+	margin: 0.5em;
+	padding: 1em;
+	width: calc(50% - 3em);
+}
+
+div.shop a
+{
+	color: $fg;
+}
+div.shop a:hover
+{
+	color: $green;
+}
+
+div.shop img
+{
+	width: 100%;
+}
+div.shop a:hover img
+{
+	opacity: 0.5;
+}
+
+div.price
+{
+	float: left;
+	line-height: 2em;
+}
+
+div.bigprice
+{
+	float: left;
+	font-weight: bold;
+	line-height: 2em;
+}
+
+img.product
+{
+	background-color: $border;
+	margin: 0.5em 0 0 0;
+	padding: 1em;
+	width: calc(100% - 2em);
 }
 
 /* The banner, if used */
@@ -83,7 +140,6 @@ wrapper p
 {
 	line-height: 1.5em;
 	text-align: justify;
-	text-indent: 2em;
 }
 
 /* The header with the title and navigation */
