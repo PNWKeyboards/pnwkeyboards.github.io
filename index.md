@@ -22,12 +22,10 @@ title: Home
 	<div style="clear: both;"></div>
 </div>
 {{ product.excerpt }}
+<div style="clear: both;"></div>
+<hr />
 {% endif %}
 {% endfor %}
-
-<div style="clear: both;"></div>
-
-<hr />
 
 <h2 class="latest_news">Latest News: <a href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a></h2>
 {{ site.posts.last.date | date_to_string }}
