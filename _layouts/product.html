@@ -1,31 +1,21 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.17/default/snipcart.css" />
-<div id="snipcart" data-api-key="{{ site.snipcart.api_key }}"></div>
-<script src="https://cdn.snipcart.com/themes/v3.0.17/default/snipcart.js"></script>
-
-<div class="product">
 
 <h2>{{ page.name }}</h2>
 
-<img class="product" src="{{ page.images | first }}" alt="{{ page.name }}" />
-
-<div style="clear: both;"></div>
-
-<div class="bigprice">${{ page.price }}</div>
-
-<button class="buy snipcart-add-item"
-		data-item-name="{{ page.name }}"
-		data-item-image="/shop/{{ page.images | first }}"
-		data-item-id="{{ page.identifier }}"
-		data-item-price="{{ page.price }}"
-		data-item-url="{{ page.url | absolute_url }}">
-		Add To Cart
-</button>
-
-<div style="clear: both; margin-top: 3em;"></div>
-
-{{ page.content }}
-
+<div class="featured">
+	<img src="/shop/{{ page.images | first }}" alt="{{ page.name }}" /><br/>
+	<div class="price">${{ page.price }}</div>
+	<button class="buy snipcart-add-item"
+			data-item-name="{{ page.name }}"
+			data-item-image="/shop/{{ page.images | first }}"
+			data-item-id="{{ page.identifier }}"
+			data-item-price="{{ page.price }}"
+			data-item-url="{{ page.url }}"
+			data-item-max-quantity="{{ page.quantity }}">
+			Add To Cart
+	</button>
+	<div style="clear: both; margin-bottom: 1em;"></div>
+	{{ page.content }}
 </div>

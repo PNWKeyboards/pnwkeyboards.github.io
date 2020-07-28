@@ -1,11 +1,35 @@
 <a href="/"><img src="/assets/images/title.png" /></a>
 
 <nav>
+	<cart class="snipcart-checkout">
+		<img src="/assets/images/fontawesome/shopping-cart.svg"/>
+		<div><span class="snipcart-items-count"></span> item(s)</div>
+		<div>Total:&nbsp;<span class="snipcart-total-price"></span></div>
+	</cart>
 	<label for="nav_menu"><img src="/assets/images/menu.svg" /></label>
 	<input type="checkbox" id="nav_menu">
 	<nav_menu>
 	{% for item in site.data.nav %}
-	<a class="{% if item.url == page.url %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+	<a class="{% if item.url == page.url %}active{% endif %}" href="{{ item.url }}">
+		{{ item.title }}
+	</a>
 	{% endfor %}
 	</nav_menu>
 </nav>
+
+<div style="clear: both;"></div>
+
+<subnav>
+{% for item in site.data.nav %}
+	{% if item.url == page.url %}
+		{% for child in item.children %}
+			<span style="white-space: nowrap;">
+				<a href="{{ child.url }}">
+					{{ child.title }}
+				</a>
+				{% if item.children.last != child %} &centerdot;{% endif %}
+			</span>
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+</subnav>

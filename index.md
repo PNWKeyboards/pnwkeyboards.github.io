@@ -3,12 +3,33 @@ layout: default
 title: Home
 ---
 
-## You're ready to go!
+{% for product in site.shop %}
+{% if product.featured %}
+<h2>Featured Product: <a href="{{ product.url }}">{{ product.name }}</a></h2>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<div class="featured">
+	<img src="/shop/{{ product.images | first }}" alt="{{ product.name }}" /><br/>
+	<div class="price">${{ product.price }}</div>
+	<button class="buy snipcart-add-item"
+			data-item-name="{{ product.name }}"
+			data-item-image="/shop/{{ product.images | first }}"
+			data-item-id="{{ product.identifier }}"
+			data-item-price="{{ product.price }}"
+			data-item-url="{{ product.url }}"
+			data-item-max-quantity="{{ product.quantity }}">
+			Add To Cart
+	</button>
+	<div style="clear: both;"></div>
+</div>
+{{ product.excerpt }}
+{% endif %}
+{% endfor %}
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<div style="clear: both;"></div>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<hr />
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<h2 class="latest_news">Latest News: <a href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a></h2>
+{{ site.posts.last.date | date_to_string }}
+
+{{ site.posts.last.content }}

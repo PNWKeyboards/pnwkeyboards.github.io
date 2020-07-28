@@ -3,8 +3,8 @@ $bg: #f8f8f2;
 $fg: #282828;
 $yellow: #fabd2f;
 $green: #8ec07c;
-$border: #e9e9e3;
-$maxWidth: 640px;
+$bg2: #e9e9e3;
+$maxWidth: 675px;
 $minWidth: 320px;
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
@@ -32,12 +32,10 @@ h1, h2, h3, h4, h5
 	margin: 0;
 }
 
-button.buy
+hr
 {
-	font-family: $bodyFont;
-	font-size: 14pt;
-	float: right;
-	height: 2em;
+	border: 2px solid $green;
+	margin-bottom: 1em;
 }
 
 /* Default links */
@@ -52,54 +50,6 @@ a:hover
 {
 	color: $green;
 	text-decoration: none;
-}
-
-div.shop
-{
-	background-color: $border;
-	float: left;
-	margin: 0.5em;
-	padding: 1em;
-	width: calc(50% - 3em);
-}
-
-div.shop a
-{
-	color: $fg;
-}
-div.shop a:hover
-{
-	color: $green;
-}
-
-div.shop img
-{
-	width: 100%;
-}
-div.shop a:hover img
-{
-	opacity: 0.8;
-}
-
-div.price
-{
-	float: left;
-	line-height: 2em;
-}
-
-div.bigprice
-{
-	float: left;
-	font-weight: bold;
-	line-height: 2em;
-}
-
-img.product
-{
-	background-color: $border;
-	margin: 0.5em 0 0 0;
-	padding: 1em;
-	width: calc(100% - 2em);
 }
 
 /* The banner, if used */
@@ -158,6 +108,28 @@ header img
 	width: 100%;
 }
 
+/* The Cart Display */
+
+cart
+{
+	float: left;
+	font-size: 14pt;
+	text-align: left;
+}
+
+cart > *
+{
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+cart img
+{
+	float: left;
+	margin: 7px 10px 0 0;
+	width: 2em;
+}
+
 /* All the navigation */
 
 nav
@@ -166,6 +138,15 @@ nav
 	font-size: 1.4em;
 	font-weight: bold;
 	text-align: right;
+}
+
+subnav
+{
+	display: block;
+	margin-top: 1em;
+	width: 75%;
+	text-align: right;
+	margin-left: auto;
 }
 
 nav_menu a
@@ -183,6 +164,12 @@ nav_menu a.active
     color: $fg;
 }
 
+nav_menu span.sup
+{
+	vertical-align: super;
+	font-size: 0.5em;
+}
+
 @media screen and (max-width: $maxWidth)
 {
 	nav a
@@ -192,6 +179,14 @@ nav_menu a.active
 		display: block;
 		text-align: center;
 		margin: 0;
+	}
+
+	subnav
+	{
+		margin-bottom: 1em;
+		width: 100%;
+		text-align: center;
+		font-size: 1.4em;
 	}
 }
 
@@ -234,6 +229,7 @@ nav input[type=checkbox]:checked ~ nav_menu
 	nav label
 	{
 		display: inline-block;
+		margin-top: 1.75em;
 	}
 
 	/* Default hidden */
@@ -340,4 +336,89 @@ social a.github
 social a.github:hover
 {
 	background: #191919;
+}
+
+/* Featured Product */
+
+div.featured img
+{
+	background-color: $bg2;
+	margin: 1em 0;
+	padding: 1em;
+	width: calc(100% - 2em);
+}
+
+/* The Store */
+
+div.shop
+{
+	background-color: $bg2;
+	float: left;
+	margin: 0.5em;
+	padding: 1em;
+	width: calc(50% - 3em);
+}
+
+@media screen and (max-width: $maxWidth)
+{
+	div.shop
+	{
+		width: calc(100% - 3em);
+	}
+}
+
+div.shop a
+{
+	color: $fg;
+}
+div.shop a:hover
+{
+	color: $green;
+}
+
+div.shop img
+{
+	/* A negative margin on the bottom removes the non a-href space below */
+	/* the image. I am not sure why it happens but this fixes it. */
+	margin: 0 0 -0.5em 0;
+	width: 100%;
+}
+div.shop a:hover img
+{
+	opacity: 0.8;
+}
+
+div.shop h3
+{
+	padding: 0.5em 0;
+}
+
+div.price
+{
+	float: left;
+	line-height: 2em;
+}
+
+div.bigprice
+{
+	float: left;
+	font-weight: bold;
+	line-height: 2em;
+}
+
+button.buy
+{
+	font-family: $bodyFont;
+	font-size: 14pt;
+	float: right;
+	height: 2em;
+	white-space: nowrap;
+}
+
+img.product
+{
+	background-color: $bg2;
+	margin: 0.5em 0 0 0;
+	padding: 1em;
+	width: calc(100% - 2em);
 }
