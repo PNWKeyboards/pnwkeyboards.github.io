@@ -16,4 +16,7 @@
 	<a href="https://github.com/dnlglsn/dnlglsn.github.io/blob/master/LICENSE" title="Website License" target="_new">Website License</a>
 </p>
 
-<p>&copy; 2020 Daniel Gleason</p>
+<p>&copy; {{ "today" | date: "%Y" }} Daniel Gleason</p>
+
+<div hidden id="snipcart" data-api-key="{{ site.snipcart.api_key }}"></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.18/default/snipcart.js"></script>

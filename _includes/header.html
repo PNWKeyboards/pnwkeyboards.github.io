@@ -13,6 +13,7 @@
 	<a class="{% if item.url == page.url %}active{% endif %}" href="{{ item.url }}">
 		{{ item.title }}
 	</a>
+	{% if site.data.nav.last != item %}<span class="navdot">&centerdot;</span>{% endif %}
 	{% endfor %}
 	</nav_menu>
 </nav>

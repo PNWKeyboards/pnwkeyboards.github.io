@@ -1,10 +1,10 @@
 $bodyFont: "Source Sans Pro";
 $bg: #f8f8f2;
+$bg2: #e9e9e3;
 $fg: #282828;
 $yellow: #fabd2f;
 $green: #8ec07c;
-$bg2: #e9e9e3;
-$maxWidth: 675px;
+$maxWidth: 700px;
 $minWidth: 320px;
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
@@ -34,8 +34,11 @@ h1, h2, h3, h4, h5
 
 hr
 {
-	border: 2px solid $green;
-	margin-bottom: 1em;
+	background: $bg2;
+	border: 0;
+	display: block;
+	height: 0.5em;
+	margin: 2em auto;
 }
 
 /* Default links */
@@ -44,6 +47,7 @@ a
 {
 	color: $yellow;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 a:hover
@@ -61,7 +65,7 @@ banner
 	display: block;
 	flex-shrink: 0;
 	line-height: 1.5em;
-	min-height: 10px;
+	min-height: 0.5em;
 	text-align: center;
 }
 
@@ -136,7 +140,6 @@ nav
 {
 	display: block;
 	font-size: 1.4em;
-	font-weight: bold;
 	text-align: right;
 }
 
@@ -151,12 +154,17 @@ subnav
 
 nav_menu a
 {
-	padding-left: 15px;
+	padding: 5px;
 }
 
 nav_menu a:first-child
 {
 	padding-left: 0;
+}
+
+nav_menu a:last-child
+{
+	padding-right: 0;
 }
 
 nav_menu a.active
@@ -179,6 +187,11 @@ nav_menu span.sup
 		display: block;
 		text-align: center;
 		margin: 0;
+	}
+
+	nav span.navdot
+	{
+		display: none;
 	}
 
 	subnav
@@ -262,6 +275,7 @@ footer
 	display: block;
 	flex-shrink: 0;
 	line-height: 1em;
+	margin-top: 2em;
 	padding: 2.5em 0 2em 0;
 	text-align: center;
 	width: 100%;
@@ -338,14 +352,39 @@ social a.github:hover
 	background: #191919;
 }
 
-/* Featured Product */
+/* Sections */
 
-div.featured img
+section
 {
-	background-color: $bg2;
-	margin: 1em 0;
-	padding: 1em;
-	width: calc(100% - 2em);
+	/*border: 0.5em solid $bg2;*/
+	/*background: $bg2;*/
+	display: inline-block;
+	/*margin-bottom: 1em;*/
+	/*padding: 1em 1em 0 1em;*/
+}
+
+section h2
+{
+	/*margin-bottom: 1em;*/
+}
+
+section > div p
+{
+	/* Excerpts */
+	/*margin: 0;*/
+}
+
+section div.more
+{
+	margin-top: 1em;
+	text-align: right;
+}
+
+section img
+{
+	margin: 1em auto;
+	width: calc(100% - 30px);
+	border: 15px solid $bg2;
 }
 
 /* The Store */
