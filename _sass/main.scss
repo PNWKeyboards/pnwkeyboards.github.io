@@ -245,7 +245,7 @@ nav input[type=checkbox]:checked ~ nav_menu
 	nav label
 	{
 		display: inline-block;
-		margin-top: 1.75em;
+		margin-top: 1.5em;
 	}
 
 	/* Default hidden */
@@ -256,7 +256,12 @@ nav input[type=checkbox]:checked ~ nav_menu
 
 	nav_menu a:last-child
 	{
-		margin-bottom: 5%;
+		margin-bottom: 1em;
+	}
+
+	content section:first-child
+	{
+		margin-top: 1em;
 	}
 }
 
