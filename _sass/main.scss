@@ -107,6 +107,11 @@ header
 	padding: 10% 0;
 }
 
+header.title
+{
+	width: $maxWidth;
+}
+
 header img
 {
 	width: 100%;
@@ -277,6 +282,12 @@ footer
 	padding: 2.5em 0 2em 0;
 	text-align: center;
 	width: 100%;
+}
+
+footer img.logo
+{
+	height: 250px;
+	width: 250px;
 }
 
 footer p
