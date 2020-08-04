@@ -21,6 +21,15 @@ collections:
   shop:
     output: true
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "shop"
+    values:
+      layout: product
+      category: "Misc Parts"
+
 exclude:
   - start_local.sh
 

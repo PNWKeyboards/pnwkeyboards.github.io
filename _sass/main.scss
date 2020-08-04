@@ -146,7 +146,6 @@ nav
 subnav
 {
 	display: block;
-	margin-top: 1em;
 	width: 75%;
 	text-align: right;
 	margin-left: auto;
@@ -154,7 +153,6 @@ subnav
 
 nav_menu a
 {
-	padding: 5px;
 }
 
 nav_menu a:first-child
@@ -356,22 +354,7 @@ social a.github:hover
 
 section
 {
-	/*border: 0.5em solid $bg2;*/
-	/*background: $bg2;*/
 	display: inline-block;
-	/*margin-bottom: 1em;*/
-	/*padding: 1em 1em 0 1em;*/
-}
-
-section h2
-{
-	/*margin-bottom: 1em;*/
-}
-
-section > div p
-{
-	/* Excerpts */
-	/*margin: 0;*/
 }
 
 section div.more
@@ -389,20 +372,19 @@ section img
 
 /* The Store */
 
-div.shop
+div.shop div.item
 {
 	background-color: $bg2;
-	float: left;
-	margin: 0.5em;
 	padding: 1em;
-	width: calc(50% - 3em);
+	margin-bottom: 1em;
+	width: calc(50% - 2.5em);
 }
 
 @media screen and (max-width: $maxWidth)
 {
-	div.shop
+	div.shop div.item
 	{
-		width: calc(100% - 3em);
+		width: calc(100% - 2em);
 	}
 }
 
@@ -425,6 +407,11 @@ div.shop img
 div.shop a:hover img
 {
 	opacity: 0.8;
+}
+
+div.shop h2
+{
+	margin: 0.5em auto 1em auto;
 }
 
 div.shop h3

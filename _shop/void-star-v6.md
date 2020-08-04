@@ -1,5 +1,4 @@
 ---
-layout: product
 name: "Void* v6"
 identifier: void_star_v6
 price: 19.95

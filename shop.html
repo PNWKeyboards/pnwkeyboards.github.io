@@ -4,21 +4,41 @@ title: Shop
 permalink: /shop.html
 ---
 
-{% for product in site.shop %}
+{% assign categories = site.shop | group_by: "category" | sort: "name" %}
+{% for category in categories %}
+
 <div class="shop">
-	<a href="{{ product.url }}">
-		<img src="/shop/{{ product.images | first }}" alt="{{ product.name }}" /><br/>
-		<h3>{{ product.name }}</h3>
-	</a>
-	<div class="price">${{ product.price }}</div>
-	<button class="buy snipcart-add-item"
-			data-item-name="{{ product.name }}"
-			data-item-image="/shop/{{ product.images | first }}"
-			data-item-id="{{ product.identifier }}"
-			data-item-price="{{ product.price }}"
-			data-item-url="{{ product.url }}"
-			data-item-max-quantity="{{ page.quantity }}">
-			Add To Cart
-	</button>
+
+	<a id="{{ category.name | slugify }}"></a>
+    <h2 style="{% if category == categories.first %}margin-top: 0;{% endif %}">{{ category.name }}</h2>
+
+    <div style="display: flex; flex-flow: row wrap; justify-content: space-between;">
+
+		{% for item in category.items %}
+		<div class="item">
+			<a href="{{ item.url }}">
+				<img src="/shop/{{ item.images | first }}" alt="{{ item.name }}" /><br/>
+				<h3>{{ item.name }}</h3>
+			</a>
+			<div class="price">${{ item.price }}</div>
+			<button class="buy snipcart-add-item"
+					data-item-name="{{ item.name }}"
+					data-item-image="/shop/{{ item.images | first }}"
+					data-item-id="{{ item.identifier }}"
+					data-item-price="{{ item.price }}"
+					data-item-url="{{ item.url }}"
+					data-item-max-quantity="{{ page.quantity }}">
+					Add To Cart
+			</button>
+		</div>
+		{% endfor %}
+
+	</div>
+
+	{% if category != categories.last %}
+	<div style="clear: both;"></div>
+	{% endif %}
+
 </div>
+
 {% endfor %}

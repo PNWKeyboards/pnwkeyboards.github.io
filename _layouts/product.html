@@ -2,20 +2,25 @@
 layout: default
 ---
 
-<h2>{{ page.name }}</h2>
-
-<div class="featured">
-	<img src="/shop/{{ page.images | first }}" alt="{{ page.name }}" /><br/>
-	<div class="price">${{ page.price }}</div>
-	<button class="buy snipcart-add-item"
-			data-item-name="{{ page.name }}"
-			data-item-image="/shop/{{ page.images | first }}"
-			data-item-id="{{ page.identifier }}"
-			data-item-price="{{ page.price }}"
-			data-item-url="{{ page.url }}"
-			data-item-max-quantity="{{ page.quantity }}">
-			Add To Cart
-	</button>
-	<div style="clear: both; margin-bottom: 1em;"></div>
-	{{ page.content }}
-</div>
+<section>
+	<div>
+		<h2>{{ page.name }}</a></h2>
+	</div>
+	<div>
+		<img src="/shop/{{ page.images | first }}" alt="{{ page.name }}"/>
+		<div class="bigprice">${{ page.price }}</div>
+			<button class="buy snipcart-add-item"
+					data-item-name="{{ page.name }}"
+					data-item-image="/shop/{{ page.images | first }}"
+					data-item-id="{{ page.identifier }}"
+					data-item-price="{{ page.price }}"
+					data-item-url="{{ page.url }}"
+					data-item-max-quantity="{{ page.quantity }}">
+					Add To Cart
+			</button>
+		<div style="clear: both;"></div>
+		<div>
+			{{ page.content }}
+		</div>
+	</div>
+</section>

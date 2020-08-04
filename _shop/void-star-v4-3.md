@@ -1,12 +1,11 @@
 ---
-name: "Void* v4"
-identifier: void_star_v4
+name: "Void* v4 3"
+identifier: void_star_v4_3
 price: 79.95
 quantity: 10
 images:
   - void_star_v4.jpg
 category: Main PCBs
-featured: true
 ---
 High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.
 

@@ -20,17 +20,14 @@
 
 <div style="clear: both;"></div>
 
-<subnav>
-{% for item in site.data.nav %}
-	{% if item.url == page.url %}
-		{% for child in item.children %}
-			<span style="white-space: nowrap;">
-				<a href="{{ child.url }}">
-					{{ child.title }}
-				</a>
-				{% if item.children.last != child %} &centerdot;{% endif %}
-			</span>
-		{% endfor %}
-	{% endif %}
-{% endfor %}
-</subnav>
+{% if page.url contains "shop" %}
+	<subnav>
+	{% assign categories = site.shop | group_by: "category" | sort: "name" %}
+	{% for category in categories %}
+		<span style="white-space: nowrap;">
+			<a href="#{{ category.name | slugify }}">{{ category.name }}</a>
+			{% if category != categories.last %}&centerdot;{% endif %}
+		</span>
+	{% endfor %}
+	</subnav>
+{% endif %}

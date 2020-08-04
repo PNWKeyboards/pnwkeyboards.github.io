@@ -36,7 +36,7 @@ title: Home
 <section>
 	<div>
 		<h2>Latest News: <a href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a></h2>
-		{{ site.posts.last.date | date_to_string }}
+		{{ site.posts.last.date | date_to_string: "ordinal", "US" }}
 	</div>
 	<div>
 		{{ site.posts.last.excerpt }}

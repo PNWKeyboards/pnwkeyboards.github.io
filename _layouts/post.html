@@ -3,6 +3,6 @@ layout: default
 ---
 
 <h2>{{ page.title }}</h2>
-{{ page.date | date_to_string }}
+{{ page.date | date_to_string: "ordinal", "US" }}
 
 {{ page.content }}
