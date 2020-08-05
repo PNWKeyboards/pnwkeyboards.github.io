@@ -2,8 +2,8 @@ $bodyFont: "Source Sans Pro";
 $bg: #f8f8f2;
 $bg2: #e9e9e3;
 $fg: #282828;
-$yellow: #fabd2f;
-$green: #8ec07c;
+$red: #ff4b00;
+$blue: #268bd2;
 $maxWidth: 700px;
 $minWidth: 320px;
 
@@ -45,14 +45,13 @@ hr
 
 a
 {
-	color: $yellow;
+	color: $red;
 	text-decoration: none;
-	font-weight: bold;
 }
 
 a:hover
 {
-	color: $green;
+	color: $blue;
 	text-decoration: none;
 }
 
@@ -90,7 +89,7 @@ wrapper
 	padding: 0 2em;
 }
 
-wrapper p
+wrapper p, li
 {
 	line-height: 1.5em;
 	text-align: justify;
@@ -158,6 +157,7 @@ subnav
 
 nav_menu a
 {
+	font-weight: bold;
 }
 
 nav_menu a:first-child
@@ -319,6 +319,16 @@ social a
 	width: 1.5em;
 }
 
+social a:first-child
+{
+	margin-left: 0;
+}
+
+social a:last-child
+{
+	margin-right: 0;
+}
+
 /* For social hover colors: luminosity + 5 */
 
 social a.facebook
@@ -383,6 +393,20 @@ section img
 {
 	margin: 1em auto;
 	width: calc(100% - 30px);
+}
+
+.about_image
+{
+	float: right;
+	margin-left: 1em;
+	max-width: 200px;
+	max-height: 200px;
+	width: 30%;
+	height: 30%;
+}
+
+section img, .about_image
+{
 	border: 15px solid $bg2;
 }
 
@@ -402,15 +426,6 @@ div.shop div.item
 	{
 		width: calc(100% - 2em);
 	}
-}
-
-div.shop a
-{
-	color: $fg;
-}
-div.shop a:hover
-{
-	color: $green;
 }
 
 div.shop img

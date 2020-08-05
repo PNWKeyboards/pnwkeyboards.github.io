@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="193.19371"
+   height="193.19371"
+   viewBox="0 0 51.115838 51.115838"
+   version="1.1"
+   id="svg1094"
+   inkscape:export-filename="/home/danielg/mine/git/dnlglsn.github.io/assets/images/favicon-16.png"
+   inkscape:export-xdpi="7.9505696"
+   inkscape:export-ydpi="7.9505696"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="pnwkb_favicon.svg">
+  <defs
+     id="defs1088" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="77.696146"
+     inkscape:cy="80.871219"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     inkscape:window-width="1452"
+     inkscape:window-height="1212"
+     inkscape:window-x="654"
+     inkscape:window-y="86"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata1091">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-87.002065,-99.578222)">
+    <rect
+       style="opacity:1;fill:#f8f8f2;fill-opacity:1;stroke:#f8f8f2;stroke-width:2.64583325;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:28.34645653;stroke-opacity:1;paint-order:normal"
+       id="rect1689"
+       width="48.470001"
+       height="48.470001"
+       x="88.324982"
+       y="100.90114"
+       rx="2.6458333"
+       ry="2.6458335" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.80033875px;line-height:1em;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#282828;fill-opacity:1;stroke:none;stroke-width:0.70875627"
+       x="88.765556"
+       y="147.2298"
+       id="text982-3"
+       inkscape:export-xdpi="111.66"
+       inkscape:export-ydpi="111.66"><tspan
+         sodipodi:role="line"
+         id="tspan980-6"
+         x="88.765556"
+         y="147.2298"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';letter-spacing:0px;fill:#282828;fill-opacity:1;stroke-width:0.70875627">KB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.20950317px;line-height:1em;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#282828;fill-opacity:1;stroke:none;stroke-width:0.24515595"
+       x="90.855408"
+       y="116.8549"
+       id="text986-7"
+       transform="scale(0.98975729,1.0103487)"
+       inkscape:export-xdpi="111.66"
+       inkscape:export-ydpi="111.66"><tspan
+         sodipodi:role="line"
+         id="tspan984-5"
+         x="90.855408"
+         y="116.8549"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.20950317px;font-family:Barlow;-inkscape-font-specification:'Barlow Bold';fill:#282828;fill-opacity:1;stroke-width:0.24515595">PNW</tspan></text>
+  </g>
+</svg>

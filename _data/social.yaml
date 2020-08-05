@@ -15,6 +15,5 @@
   tooltip: Reddit r/PNWKeyboards
 
 - name: github
-  href: https://github.com/dnlglsn/dnlglsn.github.io
-  tooltip: Github dnlglsn
-
+  href: https://github.com/pnwkeyboards
+  tooltip: Github PNWKeyboards

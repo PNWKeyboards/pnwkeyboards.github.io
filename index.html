@@ -10,7 +10,7 @@ title: Home
 		<h2>Featured Product: <a href="{{ product.url }}">{{ product.name }}</a></h2>
 	</div>
 	<div>
-		<img src="/shop/{{ product.images | first }}" alt="{{ product.name }}"/>
+		<img src="/shop/{{ product.images | first }}" alt="{{ product.name }}" class="border" />
 		<div class="bigprice">${{ product.price }}</div>
 			<button class="buy snipcart-add-item"
 					data-item-name="{{ product.name }}"
