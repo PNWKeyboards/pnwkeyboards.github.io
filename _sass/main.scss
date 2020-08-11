@@ -485,3 +485,21 @@ img.product
 	padding: 1em;
 	width: calc(100% - 2em);
 }
+
+/* Error Page */
+
+div.error_code
+{
+	font-size: 6em;
+	font-weight: bold;
+	line-height: 1em;
+	text-align:center;
+}
+
+div.error_description
+{
+	color: $red;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}

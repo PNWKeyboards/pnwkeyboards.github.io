@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% assign resource = product.url | split: "/" | last %}
-{% assign base_dir = product.url | remove: resource %}
+{% assign resource = page.url | split: "/" | last %}
+{% assign base_dir = page.url | remove: resource %}
 
 <section>
 	<div>
