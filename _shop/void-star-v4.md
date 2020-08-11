@@ -1,11 +1,18 @@
 ---
 name: "Void* v4"
+description: The fourth version of the Void* main PCB
 identifier: void_star_v4
+category: Main PCBs
 price: 79.95
 quantity: 10
-images:
+og:
+  image: void_star_v4.jpg
+  image_mimetype: image/jpeg
+  image_width: 1200
+  image_height: 350
+  image_alt: The PNWKeyboards Logo
+other_images:
   - void_star_v4.jpg
-category: Main PCBs
 featured: true
 ---
 High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.

@@ -2,16 +2,19 @@
 layout: default
 ---
 
+{% assign resource = product.url | split: "/" | last %}
+{% assign base_dir = product.url | remove: resource %}
+
 <section>
 	<div>
 		<h2>{{ page.name }}</a></h2>
 	</div>
 	<div>
-		<img src="/shop/{{ page.images | first }}" alt="{{ page.name }}"/>
+		<img src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.name }}"/>
 		<div class="bigprice">${{ page.price }}</div>
 			<button class="buy snipcart-add-item"
 					data-item-name="{{ page.name }}"
-					data-item-image="/shop/{{ page.images | first }}"
+					data-item-image="{{ page.og.image | prepend: base_dir }}"
 					data-item-id="{{ page.identifier }}"
 					data-item-price="{{ page.price }}"
 					data-item-url="{{ page.url }}"

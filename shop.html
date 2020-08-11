@@ -14,19 +14,22 @@ title: Shop
     <div style="display: flex; flex-flow: row wrap; justify-content: space-between;">
 
 		{% for item in category.items %}
+		{% assign resource = item.url | split: "/" | last %}
+		{% assign base_dir = item.url | remove: resource %}
+
 		<div class="item">
 			<a href="{{ item.url }}">
-				<img src="/shop/{{ item.images | first }}" alt="{{ item.name }}" /><br/>
+				<img src="{{ item.og.image | prepend: base_dir }}" alt="{{ item.name }}" /><br/>
 				<h3>{{ item.name }}</h3>
 			</a>
 			<div class="price">${{ item.price }}</div>
 			<button class="buy snipcart-add-item"
 					data-item-name="{{ item.name }}"
-					data-item-image="/shop/{{ item.images | first }}"
+					data-item-image="{{ item.og.image | prepend: base_dir }}"
 					data-item-id="{{ item.identifier }}"
 					data-item-price="{{ item.price }}"
 					data-item-url="{{ item.url }}"
-					data-item-max-quantity="{{ page.quantity }}">
+					data-item-max-quantity="{{ item.quantity }}">
 					Add To Cart
 			</button>
 		</div>

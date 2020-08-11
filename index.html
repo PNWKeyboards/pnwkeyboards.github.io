@@ -5,16 +5,18 @@ title: Home
 
 {% for product in site.shop %}
 {% if product.featured %}
+{% assign resource = product.url | split: "/" | last %}
+{% assign base_dir = product.url | remove: resource %}
 <section>
 	<div>
 		<h2>Featured Product: <a href="{{ product.url }}">{{ product.name }}</a></h2>
 	</div>
 	<div>
-		<img src="/shop/{{ product.images | first }}" alt="{{ product.name }}" class="border" />
+		<img src="{{ product.og.image | prepend: base_dir }}" alt="{{ product.name }}" class="border" />
 		<div class="bigprice">${{ product.price }}</div>
 			<button class="buy snipcart-add-item"
 					data-item-name="{{ product.name }}"
-					data-item-image="/shop/{{ product.images | first }}"
+					data-item-image="{{ product.og.image | prepend: base_dir }}"
 					data-item-id="{{ product.identifier }}"
 					data-item-price="{{ product.price }}"
 					data-item-url="{{ product.url }}"
@@ -35,11 +37,11 @@ title: Home
 
 <section>
 	<div>
-		<h2>Latest News: <a href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a></h2>
-		{{ site.posts.last.date | date_to_string: "ordinal", "US" }}
+		<h2>Latest News: <a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+		<div class="date">{{ site.posts.first.date | date_to_string: "ordinal", "US" }}</div>
 	</div>
 	<div>
-		{{ site.posts.last.excerpt }}
+		{{ site.posts.first.excerpt }}
 	</div>
-	<div class="more"><a href="{{ site.posts.last.url }}">Read More &rarr;</a></div>
+	<div class="more"><a href="{{ site.posts.first.url }}">Read More &rarr;</a></div>
 </section>

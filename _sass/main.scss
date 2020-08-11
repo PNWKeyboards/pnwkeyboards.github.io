@@ -380,7 +380,13 @@ social a.github:hover
 
 section
 {
-	display: inline-block;
+	display: block;
+}
+
+div.date
+{
+	font-style: italic;
+	font-size: 0.8em;
 }
 
 section div.more
