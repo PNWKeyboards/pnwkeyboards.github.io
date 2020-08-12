@@ -20,12 +20,12 @@
 
 <div style="clear: both;"></div>
 
-{% if page.url contains "shop" %}
+{% if page.url contains "shop" or page.url contains "products" %}
 	<subnav>
-	{% assign categories = site.shop | group_by: "category" | sort: "name" %}
+	{% assign categories = site.products | group_by: "category" | sort: "name" %}
 	{% for category in categories %}
 		<span style="white-space: nowrap;">
-			<a href="#{{ category.name | slugify }}">{{ category.name }}</a>
+			<a href="/shop.html#{{ category.name | slugify }}">{{ category.name }}</a>
 			{% if category != categories.last %}&centerdot;{% endif %}
 		</span>
 	{% endfor %}

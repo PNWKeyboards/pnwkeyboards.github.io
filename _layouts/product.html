@@ -9,21 +9,35 @@ layout: default
 	<div>
 		<h2>{{ page.name }}</a></h2>
 	</div>
-	<div>
-		<img src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.name }}"/>
-		<div class="bigprice">${{ page.price }}</div>
-			<button class="buy snipcart-add-item"
-					data-item-name="{{ page.name }}"
-					data-item-image="{{ page.og.image | prepend: base_dir }}"
-					data-item-id="{{ page.identifier }}"
-					data-item-price="{{ page.price }}"
-					data-item-url="{{ page.url }}"
-					data-item-max-quantity="{{ page.quantity }}">
-					Add To Cart
-			</button>
-		<div style="clear: both;"></div>
-		<div>
-			{{ page.content }}
-		</div>
+
+	<div class="thumb_clicker">
+		<img class="thumbs active" src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.og.image_alt }}" onclick="change_image(0);">
+		<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" onclick="change_image(1);">
+		<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg" onclick="change_image(2);">
 	</div>
+
+	<img src="/assets/images/fontawesome/angle-left.svg" style="margin: calc(0.5em + 15px) 0 0 15px; background-color: #e9e9e3; border: 0; width: 50px; height: 60px; position: absolute;"/>
+	<img src="/assets/images/fontawesome/angle-right.svg" style="margin: calc(0.5em + 15px) 0 0 100px; background-color: #e9e9e3; border: 0; width: 50px; height: 60px; position: absolute;"/>
+	<a href="{{ page.og.image | prepend: base_dir }}" target="_new"><img class="images" src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.og.image_alt }}"></a>
+	<a href="https://www.w3schools.com/w3css/img_snow_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_snow_wide.jpg"></a>
+	<a href="https://www.w3schools.com/w3css/img_mountains_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"></a>
+
+	<div class="bigprice">${{ page.price }}</div>
+
+	<button class="buy snipcart-add-item"
+			data-item-name="{{ page.name }}"
+			data-item-image="{{ page.og.image | prepend: base_dir }}"
+			data-item-id="{{ page.identifier }}"
+			data-item-price="{{ page.price }}"
+			data-item-url="{{ page.url }}"
+			data-item-max-quantity="{{ page.quantity }}">
+			Add To Cart
+	</button>
+
+	<div style="clear: both;"></div>
+
+	<div>
+		{{ page.content }}
+	</div>
+
 </section>

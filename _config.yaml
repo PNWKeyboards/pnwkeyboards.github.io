@@ -17,14 +17,14 @@ snipcart:
   api_key: N2VmM2ExZDQtZjhhMS00Y2Y1LWI1MWMtZjAwOTE1NTY0YjgzNjM3MzA5OTIyOTE1NzYzNjk0
 
 collections:
-  shop:
+  products:
     output: true
 
 defaults:
   -
     scope:
       path: ""
-      type: "shop"
+      type: "products"
     values:
       layout: product
       category: "Misc Parts"

@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for product in site.shop %}
+{% for product in site.products %}
 {% if product.featured %}
 {% assign resource = product.url | split: "/" | last %}
 {% assign base_dir = product.url | remove: resource %}

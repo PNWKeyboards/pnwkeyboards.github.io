@@ -3,7 +3,7 @@ layout: default
 title: Shop
 ---
 
-{% assign categories = site.shop | group_by: "category" | sort: "name" %}
+{% assign categories = site.products | group_by: "category" | sort: "name" %}
 {% for category in categories %}
 
 <div class="shop">
