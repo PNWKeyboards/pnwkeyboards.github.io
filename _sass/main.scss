@@ -509,24 +509,45 @@ div.error_description
 img.images
 {
 	cursor: pointer;
-	width: calc(100% - 30px);
+	float: left;
 	margin-top: 0.5em;
+	width: calc(100% - 150px);
 }
 
 .thumb_clicker
 {
-	height: 130px;
+	height: 20vw;
 	margin-top: 15px;
+	max-height: 130px;
+	min-height: 70px;
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
 }
 
+.image_arrows
+{
+	background-color: $bg2;
+	border: 0;
+	cursor: pointer;
+	float: left;
+	height: 70px;
+	margin: 0.5em 0;
+	width: 50px;
+	padding: 5px;
+}
+
 @media screen and (max-width: $maxWidth)
 {
-	.thumb_clicker
+	img.images
 	{
-		height: 100px;
+		width: calc(100% - 50px - 16vw);
+	}
+
+	.image_arrows
+	{
+		height: 10vw;
+		width: 8vw;
 	}
 }
 

@@ -53,22 +53,37 @@
 
 <!-- Image Carousel Script -->
 <script type="text/javascript">
+
+var currentImage = 0;
+
 function change_image(n)
 {
-	var i;
+	var imageIndex = n;
 	var images = document.getElementsByClassName("images");
 	var thumbs = document.getElementsByClassName("thumbs");
-	if (n > images.length) {n = 0}
-	if (n < 0) {n = images.length}
-	for (i = 0; i < images.length; i++)
+	if (imageIndex >= images.length)
+	{
+		imageIndex = 0;
+	}
+	if (imageIndex < 0)
+	{
+		imageIndex = images.length - 1;
+	}
+	for (var i = 0; i < images.length; i++)
 	{
 		images[i].className = "images hidden";
 	}
-	for (i = 0; i < thumbs.length; i++)
+	for (var i = 0; i < thumbs.length; i++)
 	{
 		thumbs[i].className = "thumbs inactive";
 	}
-	images[n].className = "images";
-	thumbs[n].className = "thumbs active";
+	images[imageIndex].className = "images";
+	thumbs[imageIndex].className = "thumbs active";
+	currentImage = imageIndex;
+}
+
+function rotate_image(n)
+{
+	change_image(currentImage + n);
 }
 </script>
