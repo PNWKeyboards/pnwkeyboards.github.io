@@ -509,45 +509,61 @@ div.error_description
 img.images
 {
 	cursor: pointer;
-	float: left;
-	margin-top: 0.5em;
-	width: calc(100% - 150px);
+	margin: 15px 0 0 0;
+}
+
+.thumb_container
+{
+	height: 15vw;
+	margin: 15px 0 0 0;
+	min-height: 75px;
+	max-height: 100px;
 }
 
 .thumb_clicker
 {
-	height: 20vw;
-	margin-top: 15px;
-	max-height: 130px;
-	min-height: 70px;
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
+	width: calc(100% - 130px);
 }
 
-.image_arrows
+.image_arrows_left, .image_arrows_right
 {
 	background-color: $bg2;
 	border: 0;
 	cursor: pointer;
+	padding: 0 10px;
+	width: 30px;
+}
+
+.thumb_clicker, .image_arrows_left, .image_arrows_right
+{
 	float: left;
-	height: 70px;
-	margin: 0.5em 0;
-	width: 50px;
-	padding: 5px;
+	height: 100%;
+	margin: 0;
+}
+
+.image_arrows_left
+{
+	margin-right: 15px;
+}
+
+.image_arrows_right
+{
+	margin-left: 15px;
 }
 
 @media screen and (max-width: $maxWidth)
 {
-	img.images
+	.thumb_clicker
 	{
-		width: calc(100% - 50px - 16vw);
+		width: calc(100% - 8vw - 70px);
 	}
 
-	.image_arrows
+	.image_arrows_left, .image_arrows_right
 	{
-		height: 10vw;
-		width: 8vw;
+		width: 4vw;
 	}
 }
 
@@ -555,7 +571,7 @@ img.images
 {
 	cursor: pointer;
 	display: inline-block;
-	height: calc(100% - 30px - 0.5em);
+	height: calc(100% - 40px);
 	margin: 0 15px 0 0;
 	width: auto;
 }

@@ -59,8 +59,9 @@ var currentImage = 0;
 function change_image(n)
 {
 	var imageIndex = n;
-	var images = document.getElementsByClassName("images");
+	var cluster = document.getElementById("thumb_clicker");
 	var thumbs = document.getElementsByClassName("thumbs");
+	var images = document.getElementsByClassName("images");
 	if (imageIndex >= images.length)
 	{
 		imageIndex = 0;
@@ -79,6 +80,11 @@ function change_image(n)
 	}
 	images[imageIndex].className = "images";
 	thumbs[imageIndex].className = "thumbs active";
+	var currentWidth = thumbs[imageIndex].clientWidth;
+	var currentOffset = thumbs[imageIndex].offsetLeft;
+	var containerOffset = cluster.offsetLeft;
+	var containerWidth = cluster.clientWidth;
+	cluster.scrollLeft = currentOffset - containerOffset - (containerWidth / 2) + (currentWidth / 2);
 	currentImage = imageIndex;
 }
 

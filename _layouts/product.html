@@ -10,17 +10,23 @@ layout: default
 		<h2>{{ page.name }}</a></h2>
 	</div>
 
-	<div class="thumb_clicker">
-		<img class="thumbs active" src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.og.image_alt }}" onclick="change_image(0);">
-		<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" onclick="change_image(1);">
-		<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg" onclick="change_image(2);">
+	<div class="thumb_container">
+		<img src="/assets/images/fontawesome/angle-left.svg" class="image_arrows_left" onclick="rotate_image(-1);" />
+		<div class="thumb_clicker" id="thumb_clicker">
+			<img class="thumbs active" src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.og.image_alt }}" onclick="change_image(0);">
+			<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" onclick="change_image(1);">
+			<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg" onclick="change_image(2);">
+			<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" onclick="change_image(3);">
+			<img class="thumbs inactive" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg" onclick="change_image(4);">
+		</div>
+		<img src="/assets/images/fontawesome/angle-right.svg" class="image_arrows_right" onclick="rotate_image(1);" />
 	</div>
 
-	<img src="/assets/images/fontawesome/angle-left.svg" class="image_arrows" onclick="rotate_image(-1);" />
 	<a href="{{ page.og.image | prepend: base_dir }}" target="_new"><img class="images" src="{{ page.og.image | prepend: base_dir }}" alt="{{ page.og.image_alt }}"></a>
 	<a href="https://www.w3schools.com/w3css/img_snow_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_snow_wide.jpg"></a>
 	<a href="https://www.w3schools.com/w3css/img_mountains_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"></a>
-	<img src="/assets/images/fontawesome/angle-right.svg" class="image_arrows" onclick="rotate_image(1);" />
+	<a href="https://www.w3schools.com/w3css/img_snow_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_snow_wide.jpg"></a>
+	<a href="https://www.w3schools.com/w3css/img_mountains_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"></a>
 
 	<div style="clear: both;"></div>
 
