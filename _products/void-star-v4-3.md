@@ -3,7 +3,6 @@ name: "Void* v4 3"
 identifier: void_star_v4_3
 category: Main PCBs
 price: 79.95
-quantity: 10
 og:
   image: void_star_v4.jpg
   image_mimetype: image/jpeg

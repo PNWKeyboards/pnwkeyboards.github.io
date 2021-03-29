@@ -10,6 +10,20 @@ layout: default
 		<h2>{{ page.name }}</a></h2>
 	</div>
 
+	<div class="bigprice">${{ page.price }}</div>
+
+	<button class="buy snipcart-add-item"
+	        data-item-name="{{ page.name }}"
+	        data-item-image="{{ page.og.image | prepend: base_dir }}"
+	        data-item-id="{{ page.identifier }}"
+	        data-item-price="{{ page.price }}"
+	        data-item-url="{{ page.url }}"
+	        data-item-max-quantity="{{ page.quantity }}">
+	        Add To Cart
+	</button>
+
+	<div style="clear: both;"></div>
+
 	<div class="thumb_container">
 		<img src="/assets/images/fontawesome/angle-left.svg" class="image_arrows_left" onclick="rotate_image(-1);" />
 		<div class="thumb_clicker" id="thumb_clicker">
@@ -27,22 +41,6 @@ layout: default
 	<a href="https://www.w3schools.com/w3css/img_mountains_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"></a>
 	<a href="https://www.w3schools.com/w3css/img_snow_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_snow_wide.jpg"></a>
 	<a href="https://www.w3schools.com/w3css/img_mountains_wide.jpg" target="_new"><img class="images hidden" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg"></a>
-
-	<div style="clear: both;"></div>
-
-	<div class="bigprice">${{ page.price }}</div>
-
-	<button class="buy snipcart-add-item"
-			data-item-name="{{ page.name }}"
-			data-item-image="{{ page.og.image | prepend: base_dir }}"
-			data-item-id="{{ page.identifier }}"
-			data-item-price="{{ page.price }}"
-			data-item-url="{{ page.url }}"
-			data-item-max-quantity="{{ page.quantity }}">
-			Add To Cart
-	</button>
-
-	<div style="clear: both;"></div>
 
 	<div>
 		{{ page.content }}

@@ -4,7 +4,6 @@ description: The fourth version of the Void* main PCB
 identifier: void_star_v4
 category: Main PCBs
 price: 79.95
-quantity: 10
 og:
   image: void_star_v4.jpg
   image_mimetype: image/jpeg

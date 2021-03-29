@@ -12,7 +12,6 @@ title: Home
 		<h2>Featured Product: <a href="{{ product.url }}">{{ product.name }}</a></h2>
 	</div>
 	<div>
-		<img src="{{ product.og.image | prepend: base_dir }}" alt="{{ product.name }}" class="border" />
 		<div class="bigprice">${{ product.price }}</div>
 			<button class="buy snipcart-add-item"
 					data-item-name="{{ product.name }}"
@@ -24,6 +23,7 @@ title: Home
 					Add To Cart
 			</button>
 		<div style="clear: both;"></div>
+		<img src="{{ product.og.image | prepend: base_dir }}" alt="{{ product.name }}" class="border" />
 		<div>
 			{{ product.excerpt }}
 		</div>
