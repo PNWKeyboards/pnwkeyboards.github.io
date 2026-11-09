@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+
+:root {
+    --logo: url("assets/full_logo_with_tagline.svg");
+    --bg-pattern: url("assets/bg.png");
+    --white: #f1fbfe;
+    --light-blue: #eef9fe;
+    --blue: #37abc8;
+    --black: #0b090b;
+    --yellow: #faa916;
+    --grey: #6d676e46;
+    --light-grey: #edefef;
+    --light: 300;
+    --medium: 500;
+    --content-max-width: 1200px;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--grey);
+    color: var(--black);
+    font-family: "Inter", sans-serif;
+    font-size: 14pt;
+    font-weight: var(--light);
+    line-height: 1.4em;
+}
+
+* {
+    background-color: inherit;
+}
+
+div {
+    display: flex;
+}
+
+div.header {
+    align-items: center;
+    gap: 1em;
+    padding: 2em 1em;
+    white-space: nowrap;
+}
+
+div.logo,
+div.session {
+    width: 150px;
+}
+
+div.logo {
+    font-family: "Noto Color Emoji";
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.logo a {
+    color: black;
+}
+
+div.logo:hover {
+    cursor: pointer;
+}
+
+div.navigation {
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 1em;
+}
+
+div.navigation a {
+    font-weight: 500;
+    padding: 0.25em 0 calc(0.25em - 3px) 0;
+    border-bottom: 5px solid transparent;
+}
+
+div.navigation a:hover {
+    border-bottom: 5px solid var(--grey);
+}
+
+div.session {
+    gap: 10px;
+    justify-content: right;
+    font-family: "Noto Color Emoji";
+    font-size: 3em;
+}
+
+div.wrapper {
+    padding: 2em 1em 3em 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+div.content {
+    justify-content: center;
+    max-width: var(--content-max-width);
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+p {
+    max-width: calc((var(--content-max-width) - 2em) / 3);
+    align-self: flex-start;
+}
+
+div.content img {
+    border-radius: 1em;
+    max-width: 100%;
+    margin-bottom: 1em;
+}
+
+div.footer {
+    margin-top: auto;
+}
